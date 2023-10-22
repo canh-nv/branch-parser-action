@@ -2,9 +2,8 @@ name: 'Git branch parser'
 description: 'Parse the target branch into proper format'
 author: 'canhnv <canhcvp1998@gmail.com>'
 inputs:
-  inputBranchName:
-    description: "The branch name that needs to be parsed"
-    required: true
+  maxBranchNameLength:
+    description: "The maximum length of the branch name"
 runs:
   using: 'node16'
   main: 'dist/index.js'

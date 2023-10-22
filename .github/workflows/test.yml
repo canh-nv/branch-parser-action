@@ -1,5 +1,6 @@
 name: Test
 on:
+  push:
   pull_request:
     branchs:
       - main
@@ -42,7 +43,9 @@ jobs:
       - name: Get branch name
         id: branch-name
         uses: tj-actions/branch-names@v6
-
+      - name: Debug
+        run: |
+          echo ${{ steps.branch-name.outputs.current_branch }}
       - name: Run action
         uses: ./
         with:

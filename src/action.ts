@@ -2,7 +2,6 @@ import * as core from "@actions/core";
 import { Options } from "./options";
 
 function parseBranch(originalBranchName: string, maxBranchLength: number) {
-  console.log("max: ", maxBranchLength);
   const parsedBranchName = originalBranchName
     .replace(/\./g, "-")
     .replace(/_/g, "-")

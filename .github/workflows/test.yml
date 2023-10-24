@@ -39,11 +39,5 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Get branch name
-        id: branch-name
-        uses: tj-actions/branch-names@v6
-
       - name: Run action
         uses: ./
-        with:
-          inputBranchName: ${{ steps.branch-name.outputs.current_branch }}

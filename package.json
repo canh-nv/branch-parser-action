@@ -2,10 +2,11 @@
   "name": "branch-parser-action",
   "version": "0.0.1",
   "description": "",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "package": "ncc build --source-map --license licenses.txt"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/canh-nv/branch-parser-action#readme",
   "devDependencies": {
     "@types/node": "20.8.7",
+    "@vercel/ncc": "0.38.1",
     "typescript": "5.2.2"
   },
   "dependencies": {
